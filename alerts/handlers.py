@@ -1,6 +1,6 @@
-from base.registry import SIGNAL_REGISTRY
+from foundations.ecosystem_foundations.base.registry import SIGNAL_REGISTRY
 from .signals import CREATE_ALERT
-from .models import Alert, AlertStatus
+from .models import Alert, AlertStatusItem
 
 @SIGNAL_REGISTRY.register(CREATE_ALERT)
 def create_alert_handler(payload, **kwargs):
@@ -19,7 +19,7 @@ def create_alert_handler(payload, **kwargs):
     alert = Alert(
         reason=payload["reason"],
         severity=payload["severity"],
-        status=AlertStatus.objects.get(code="open"),
+        status=AlertStatusItem.objects.get(code="open"),
         message=payload.get("message", ""),
     )
 

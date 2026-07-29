@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 import pghistory
 
-from ecosystem_foundations.base.models import BaseItemType, OptionalGenericUuidTargetMixin, BaseUuidPrimaryKeyModel
+from foundations.ecosystem_foundations.base.models import BaseItemType, OptionalGenericUuidTargetMixin, BaseUuidPrimaryKeyModel
 
 # Create your models here.
 class AlertStatusItem(BaseItemType):

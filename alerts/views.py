@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 
-from ecosystem_foundations.base.views import (
+from foundations.ecosystem_foundations.base.views import (
     ActiveQuerysetMixin,
     BaseItemTypeQueryViewSetMixin,
     BaseQueryViewSetMixin,
